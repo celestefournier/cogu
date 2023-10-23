@@ -12,8 +12,7 @@ const OUTDOOR_FUNGUS = [
 	"res://sprites/6.png"
 ]
 
-var player_fungus = 0
-var player : Node2D
+var player_fungus = ""
 
 func instance_node(node, location, parent):
 	var node_instance = node.instantiate()

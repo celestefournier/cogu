@@ -1,9 +1,6 @@
-extends Node2D
+extends TextureRect
 
-@onready var fungoPosition = $Marker2D
-var player_fungo: Node2D = null
+var fungus_texture = load(Global.player_fungus)
 
 func _ready():
-	player_fungo = load("res://scenes/Fungo1.tscn").instantiate()
-	player_fungo.global_position = fungoPosition.global_position
-	add_child(player_fungo)
+	self.texture = fungus_texture

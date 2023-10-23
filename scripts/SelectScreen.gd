@@ -37,7 +37,7 @@ func update_fungus_sprite():
 	$FungosSelecion/FungusImage.texture = texture
 
 func _on_confirme_pressed():
-	Global.player_fungus = selected_fungus
+	Global.player_fungus = fungus_list[selected_fungus]
 	open_game_scene()
 
 func open_game_scene():

@@ -113,8 +113,8 @@ offset_bottom = -186.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_1ygvc")
-theme_override_font_sizes/font_size = 105
-text = "Confirme"
+theme_override_font_sizes/font_size = 80
+text = "Confirmar"
 
 [node name="AreaSelection" type="Control" parent="."]
 layout_mode = 1
