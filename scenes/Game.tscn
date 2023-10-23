@@ -2,11 +2,21 @@
 
 [ext_resource type="Script" path="res://scripts/FungoSpawner.gd" id="1_22bxr"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 360.0
-offset_bottom = 640.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0.52549, 0.407843, 1)
 
 [node name="Fungos" type="Node2D" parent="."]
