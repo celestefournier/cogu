@@ -36,7 +36,16 @@ grow_vertical = 2
 texture = ExtResource("1_csw32")
 script = ExtResource("1_22bxr")
 
-[node name="SupplyButton" type="Button" parent="."]
+[node name="ActionButtons" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SupplyButton" type="Button" parent="ActionButtons"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -49,10 +58,10 @@ offset_right = -23.0
 offset_bottom = -379.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 55
 text = "Alimentação"
 
-[node name="HealthButton" type="Button" parent="."]
+[node name="HealthButton" type="Button" parent="ActionButtons"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -65,10 +74,10 @@ offset_right = 453.0
 offset_bottom = -379.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 55
 text = "Saúde"
 
-[node name="TestsButton" type="Button" parent="."]
+[node name="TestsButton" type="Button" parent="ActionButtons"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -81,11 +90,11 @@ offset_right = -23.0
 offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 55
 disabled = true
 text = "Testes"
 
-[node name="RegistryButton" type="Button" parent="."]
+[node name="RegistryButton" type="Button" parent="ActionButtons"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -98,6 +107,38 @@ offset_right = 453.0
 offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 55
 disabled = true
 text = "Registro"
+
+[node name="FoodModal" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SupplyButton" type="Button" parent="FoodModal"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -456.0
+offset_top = -557.0
+offset_right = -23.0
+offset_bottom = -379.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 55
+text = "Restos Orgânicos"
+
+[node name="HealthModal" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
