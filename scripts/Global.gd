@@ -1,13 +1,17 @@
 extends Node
 
-const FUNGUS_SPRITES = [
+const INDOOR_FUNGUS = [
 	"res://sprites/1.png",
 	"res://sprites/2.png",
 	"res://sprites/3.png",
+]
+
+const OUTDOOR_FUNGUS = [
 	"res://sprites/4.png",
 	"res://sprites/5.png",
 	"res://sprites/6.png"
 ]
+
 var player_fungus = 0
 var player : Node2D
 
