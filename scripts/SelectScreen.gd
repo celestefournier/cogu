@@ -41,4 +41,4 @@ func _on_confirme_pressed():
 	open_game_scene()
 
 func open_game_scene():
-	get_tree().change_scene_to_file("res://scenes/Game.tscn")
+	get_tree().change_scene_to_file("res://scenes/Gameplay.tscn")

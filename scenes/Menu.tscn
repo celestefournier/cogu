@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://cn3e5cw11m0uw"]
 
-[ext_resource type="Script" path="res://scripts/StartScreen.gd" id="1_hqxdq"]
-[ext_resource type="FontFile" uid="uid://doov86h8df6is" path="res://fonts/Mooli-Regular.ttf" id="3_axfb8"]
+[ext_resource type="Script" path="res://scripts/Menu/MenuController.gd" id="1_dnnsu"]
+[ext_resource type="FontFile" uid="uid://doov86h8df6is" path="res://fonts/Mooli-Regular.ttf" id="2_tyim3"]
 
-[node name="Start" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hqxdq")
+script = ExtResource("1_dnnsu")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("3_axfb8")
+theme_override_fonts/font = ExtResource("2_tyim3")
 theme_override_font_sizes/font_size = 80
 text = "Começar"
 icon_alignment = 1

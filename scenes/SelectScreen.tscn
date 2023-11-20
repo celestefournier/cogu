@@ -135,7 +135,7 @@ offset_right = 475.0
 offset_bottom = 568.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_1ygvc")
-theme_override_font_sizes/font_size = 105
+theme_override_font_sizes/font_size = 95
 text = "Onde você quer colher seu fungo?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -155,7 +155,7 @@ offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Área Interna"
+text = "Ar Livre"
 
 [node name="OutdoorButton" type="Button" parent="AreaSelection"]
 layout_mode = 1
@@ -171,7 +171,7 @@ offset_bottom = 315.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Área Externa"
+text = "Em Casa"
 
 [connection signal="pressed" from="FungosSelecion/Left Button" to="." method="_on_ui_le_pressed"]
 [connection signal="pressed" from="FungosSelecion/Right Button" to="." method="_on_ui_ld_pressed"]
