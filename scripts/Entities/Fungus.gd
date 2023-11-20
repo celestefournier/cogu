@@ -31,7 +31,15 @@ func feed(nutrient):
     
     return true
 
+func hydrate():
+    if humidity_level >= 100:
+        return false
+    
+    humidity_level = min(nutrition_level + 50, 100)
+
+    return true
+
 func update_status():
     nutrition_level -= 5
-    temperature_level -= 5
+    temperature_level = max(temperature_level - 5, 0)
     humidity_level -= 5
