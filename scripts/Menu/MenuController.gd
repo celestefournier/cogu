@@ -1,5 +1,4 @@
 extends Control
 
-func _on_start_button_button_down():
+func new_game():
 	get_tree().change_scene_to_file("res://scenes/SelectScreen.tscn")
-	pass

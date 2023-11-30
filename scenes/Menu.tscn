@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn3e5cw11m0uw"]
+[gd_scene load_steps=4 format=3 uid="uid://cn3e5cw11m0uw"]
 
 [ext_resource type="Script" path="res://scripts/Menu/MenuController.gd" id="1_dnnsu"]
-[ext_resource type="FontFile" uid="uid://doov86h8df6is" path="res://fonts/Mooli-Regular.ttf" id="2_tyim3"]
+[ext_resource type="FontFile" uid="uid://dytahftn1arer" path="res://fonts/FredokaOne-Regular.ttf" id="2_qngdu"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="3_evk30"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,26 +20,98 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.156863, 0.372549, 0.27451, 1)
+color = Color(0.8, 0.866667, 0.713726, 1)
 
-[node name="Start Button" type="Button" parent="."]
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -247.0
+offset_top = 147.0
+offset_right = 247.0
+offset_bottom = 393.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.188235, 0.231373, 0.129412, 1)
+theme_override_fonts/font = ExtResource("2_qngdu")
+theme_override_font_sizes/font_size = 228
+text = "Cogu"
+
+[node name="NewGame" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -326.0
-offset_top = -101.0
-offset_right = 334.0
-offset_bottom = 93.0
+offset_left = -290.0
+offset_top = -377.0
+offset_right = 293.0
+offset_bottom = -127.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_tyim3")
-theme_override_font_sizes/font_size = 80
-text = "Começar"
+theme = ExtResource("3_evk30")
+text = "Novo Jogo"
 icon_alignment = 1
 
-[connection signal="button_down" from="Start Button" to="." method="_on_start_button_button_down"]
+[node name="Continue" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -83.0
+offset_right = 293.0
+offset_bottom = 167.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_evk30")
+disabled = true
+text = "Continuar"
+icon_alignment = 1
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = 216.0
+offset_right = 293.0
+offset_bottom = 466.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_evk30")
+text = "Opções"
+icon_alignment = 1
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = 509.0
+offset_right = 293.0
+offset_bottom = 759.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_evk30")
+text = "Créditos"
+icon_alignment = 1
+
+[connection signal="button_down" from="NewGame" to="." method="new_game"]

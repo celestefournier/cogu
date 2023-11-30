@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cx63u7p8ge6u8"]
+
+[ext_resource type="FontFile" uid="uid://dytahftn1arer" path="res://fonts/FredokaOne-Regular.ttf" id="1_lafjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iakqk"]
+bg_color = Color(0.19, 0.23, 0.13, 0.3)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3by6"]
+bg_color = Color(0.188235, 0.231373, 0.129412, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb15q"]
+bg_color = Color(0.294118, 0.345098, 0.219608, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[resource]
+default_font = ExtResource("1_lafjm")
+default_font_size = 66
+Button/colors/font_color = Color(0.8, 0.866667, 0.713726, 1)
+Button/colors/font_disabled_color = Color(0.8, 0.870588, 0.709804, 1)
+Button/colors/font_focus_color = Color(0.8, 0.870588, 0.709804, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_iakqk")
+Button/styles/hover = SubResource("StyleBoxFlat_p3by6")
+Button/styles/normal = SubResource("StyleBoxFlat_p3by6")
+Button/styles/pressed = SubResource("StyleBoxFlat_pb15q")
