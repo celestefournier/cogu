@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bky5nae3pmoi3"]
 
-[ext_resource type="FontFile" uid="uid://doov86h8df6is" path="res://fonts/Mooli-Regular.ttf" id="1_1ygvc"]
 [ext_resource type="Script" path="res://scripts/SelectScreen.gd" id="1_g7ry2"]
 [ext_resource type="Texture2D" uid="uid://cg78cghl1obap" path="res://sprites/reshot-icon-chevron-arrow-left-circle-XY6MSRE5DN.svg" id="2_yyw78"]
 [ext_resource type="Texture2D" uid="uid://n80rcb7ha07f" path="res://sprites/2.png" id="3_bhqb0"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="5_en4y3"]
 
 [node name="SelectScreen" type="Control"]
 layout_mode = 3
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.317647, 0.215686, 1)
+color = Color(0.8, 0.870588, 0.709804, 1)
 
 [node name="FungosSelecion" type="Control" parent="."]
 visible = false
@@ -38,16 +38,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -434.0
-offset_top = 312.0
-offset_right = 434.0
-offset_bottom = 442.0
+offset_left = -543.5
+offset_top = 246.0
+offset_right = 543.5
+offset_bottom = 506.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_1ygvc")
-theme_override_font_sizes/font_size = 105
+theme = ExtResource("5_en4y3")
+theme_override_font_sizes/font_size = 104
 text = "Colete seu fungo:"
 horizontal_alignment = 1
-vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Left Button" type="TextureButton" parent="FungosSelecion"]
 layout_mode = 1
@@ -106,14 +106,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -291.0
-offset_top = -384.0
-offset_right = 291.0
-offset_bottom = -186.0
+offset_left = -400.0
+offset_top = -432.0
+offset_right = 400.0
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("1_1ygvc")
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("5_en4y3")
 text = "Confirmar"
 
 [node name="AreaSelection" type="Control" parent="."]
@@ -129,16 +128,15 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -454.0
-offset_top = 178.0
-offset_right = 475.0
-offset_bottom = 568.0
+offset_left = -543.5
+offset_top = 246.0
+offset_right = 543.5
+offset_bottom = 506.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_1ygvc")
-theme_override_font_sizes/font_size = 95
+theme = ExtResource("5_en4y3")
+theme_override_font_sizes/font_size = 104
 text = "Onde você quer colher seu fungo?"
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="IndoorButton" type="Button" parent="AreaSelection"]
@@ -148,13 +146,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -397.0
-offset_top = -132.0
-offset_right = 398.0
-offset_bottom = 58.0
+offset_left = -400.0
+offset_top = -155.0
+offset_right = 400.0
+offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 60
+theme = ExtResource("5_en4y3")
 text = "Ar Livre"
 
 [node name="OutdoorButton" type="Button" parent="AreaSelection"]
@@ -164,12 +162,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -397.0
-offset_top = 125.0
-offset_right = 398.0
-offset_bottom = 315.0
+offset_left = -400.0
+offset_top = 136.0
+offset_right = 400.0
+offset_bottom = 372.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_en4y3")
 theme_override_font_sizes/font_size = 60
 text = "Em Casa"
 

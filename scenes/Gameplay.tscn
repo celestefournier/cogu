@@ -273,6 +273,7 @@ grow_vertical = 2
 script = ExtResource("3_360f8")
 
 [node name="TemperatureValue" type="Label" parent="HealthModal"]
+layout_mode = 0
 offset_left = 84.0
 offset_top = 153.0
 offset_right = 213.0
