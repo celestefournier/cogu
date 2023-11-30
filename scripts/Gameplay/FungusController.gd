@@ -1,15 +1,16 @@
 extends TextureRect
 
 @onready var food_balloon = $'../FoodBalloon'
+@onready var temperature_balloon = $'../TemperatureBalloon'
 @onready var humidity_balloon = $'../HumidityBalloon'
 @onready var food_value = $'../Debbuger/Food Value'
-@onready var temperature_value = $'../Debbuger/Temp Value'
 @onready var humidity_value = $'../Debbuger/Humidy Value'
 @onready var game_controller = $'../../Game'
 
 var fungus_texture = load(Global.player_fungus)
 var fungus
 var balloon_visible = false
+var intial_temperature = 20
 
 func _ready():
 	self.texture = fungus_texture
@@ -27,7 +28,8 @@ func _ready():
 		temperature_preference_max,
 		humidity_preference_min,
 		humidity_preference_max,
-		last_hydration
+		last_hydration,
+		intial_temperature
 	)
 
 	_loop_action()
@@ -36,7 +38,6 @@ func _ready():
 func _loop_action():
 	while true:
 		food_value.text = str(fungus.nutrition_status)
-		temperature_value.text = str(fungus.temperature_status)
 		humidity_value.text = str(fungus.humidity_status)
 
 		await get_tree().create_timer(1).timeout
@@ -47,8 +48,11 @@ func _loop_action():
 			food_balloon.visible = true
 			balloon_visible = true
 
-		# if (fungus.temperature_status <= 50):
-		# 	food_balloon.visible = true
+		if ((fungus.temperature < fungus.temperature_preference_min ||
+			fungus.temperature > fungus.temperature_preference_max) &&
+			!balloon_visible):
+			temperature_balloon.visible = true
+			balloon_visible = true
 
 		if (fungus.humidity_status <= 50 && !balloon_visible):
 			humidity_balloon.visible = true
@@ -64,6 +68,14 @@ func feed(nutrient):
 
 	if (fungus.nutrition_status >= 50):
 		food_balloon.visible = false
+		balloon_visible = false
+
+func change_temperature(temperature):
+	fungus.change_temperature(temperature)
+
+	if (temperature >= fungus.temperature_preference_min &&
+		temperature <= fungus.temperature_preference_max):
+		temperature_balloon.visible = false
 		balloon_visible = false
 
 func hydrate():

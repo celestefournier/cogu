@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjt83tvonc67t"]
+[gd_scene load_steps=9 format=3 uid="uid://cjt83tvonc67t"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay/GameplayController.gd" id="1_pk7iq"]
 [ext_resource type="Script" path="res://scripts/Gameplay/FoodModal.gd" id="2_hb6d8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/Gameplay/FungusController.gd" id="4_fvaol"]
 [ext_resource type="Texture2D" uid="uid://du5jca0xup8ty" path="res://sprites/food.png" id="5_fcqfa"]
 [ext_resource type="Texture2D" uid="uid://p5jih2wjb8l2" path="res://sprites/humidity_balloon.png" id="7_loalp"]
+[ext_resource type="Texture2D" uid="uid://bi1e3nsurixvn" path="res://sprites/temperature_balloon.png" id="8_w5pn6"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -40,6 +41,7 @@ offset_left = 84.0
 offset_top = 57.0
 offset_right = 273.0
 offset_bottom = 156.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
 theme_override_font_sizes/font_size = 70
 text = "nutri:"
 
@@ -49,24 +51,7 @@ offset_left = 273.0
 offset_top = 57.0
 offset_right = 402.0
 offset_bottom = 156.0
-theme_override_font_sizes/font_size = 70
-text = "100"
-
-[node name="Temp" type="Label" parent="Debbuger"]
-layout_mode = 1
-offset_left = 671.0
-offset_top = 156.0
-offset_right = 869.0
-offset_bottom = 255.0
-theme_override_font_sizes/font_size = 70
-text = "temp:"
-
-[node name="Temp Value" type="Label" parent="Debbuger"]
-layout_mode = 1
-offset_left = 884.0
-offset_top = 156.0
-offset_right = 1013.0
-offset_bottom = 255.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
 theme_override_font_sizes/font_size = 70
 text = "100"
 
@@ -76,6 +61,7 @@ offset_left = 671.0
 offset_top = 57.0
 offset_right = 909.0
 offset_bottom = 156.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
 theme_override_font_sizes/font_size = 70
 text = "umid:"
 
@@ -85,10 +71,12 @@ offset_left = 879.0
 offset_top = 57.0
 offset_right = 1017.0
 offset_bottom = 156.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
 theme_override_font_sizes/font_size = 70
 text = "100"
 
 [node name="ActionButtons" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -274,7 +262,6 @@ theme_override_font_sizes/font_size = 40
 text = "Voltar"
 
 [node name="HealthModal" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -284,6 +271,14 @@ offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_360f8")
+
+[node name="TemperatureValue" type="Label" parent="HealthModal"]
+offset_left = 84.0
+offset_top = 153.0
+offset_right = 213.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 70
+text = "0°C"
 
 [node name="TemperatureButton" type="Button" parent="HealthModal"]
 layout_mode = 1
@@ -349,6 +344,22 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Voltar"
 
+[node name="Slider" type="HSlider" parent="HealthModal"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -439.5
+offset_top = -382.0
+offset_right = 439.5
+offset_bottom = -258.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 40.0
+value = 20.0
+
 [node name="Fungus" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -383,6 +394,15 @@ offset_right = 1050.0
 offset_bottom = 654.0
 texture = ExtResource("7_loalp")
 
+[node name="TemperatureBalloon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 595.0
+offset_top = 221.0
+offset_right = 1050.0
+offset_bottom = 654.0
+texture = ExtResource("8_w5pn6")
+
 [connection signal="button_up" from="ActionButtons/NutritionButton" to="." method="open_food_modal"]
 [connection signal="button_up" from="ActionButtons/HealthButton" to="." method="_on_health_button_up"]
 [connection signal="button_up" from="FoodModal/Left" to="FoodModal" method="_on_previous_nutrient_button_up"]
@@ -394,3 +414,4 @@ texture = ExtResource("7_loalp")
 [connection signal="button_up" from="HealthModal/HumidityButton" to="HealthModal" method="hydrate"]
 [connection signal="button_up" from="HealthModal/SupplyButton" to="." method="open_action_buttons"]
 [connection signal="button_up" from="HealthModal/Back" to="." method="open_action_buttons"]
+[connection signal="value_changed" from="HealthModal/Slider" to="HealthModal" method="on_temperature_change"]

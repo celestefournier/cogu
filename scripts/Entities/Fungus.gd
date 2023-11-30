@@ -12,9 +12,10 @@ var humidity_preference_min: int
 var humidity_preference_max: int
 
 var nutrition_status:int = 100
-var temperature_status:int = 100
 var humidity_status:int = 100
 
+var temperature
+var last_temperature_change
 var last_hydration
 
 func _init(
@@ -23,7 +24,8 @@ func _init(
 	_temperature_preference_max,
 	_humidity_preference_min,
 	_humidity_preference_max,
-	_last_hydration
+	_last_hydration,
+	_temperature
 ):
 	nutrient_preference = _nutrient_preference
 	temperature_preference_min = _temperature_preference_min
@@ -31,6 +33,7 @@ func _init(
 	humidity_preference_min = _humidity_preference_min
 	humidity_preference_max = _humidity_preference_max
 	last_hydration = _last_hydration
+	temperature = _temperature
 
 func feed(nutrient):
 	if nutrition_status >= 100:
@@ -52,16 +55,24 @@ func hydrate():
 
 	return true
 
+func change_temperature(value):
+	temperature = value
+	last_temperature_change = Time.get_unix_time_from_system()
+
 func update_status():
 	nutrition_status -= 5
-	temperature_status = max(temperature_status - 5, 0)
-	humidity_status = max(temperature_status - 5, 0)
+	humidity_status = max(humidity_status - 5, 0)
 
 func is_alive():
 	var current_time = Time.get_unix_time_from_system()
 	var max_hours_without_hydration = 24
+	var max_hours_outside_temperature_preference = 24
 
 	var is_malnourished = nutrition_status <= 0
+	var is_thermal_stress = ((temperature < temperature_preference_min ||
+							 temperature > temperature_preference_max) &&
+							 last_temperature_change != null &&
+							(current_time - last_temperature_change) / 3600 >= max_hours_outside_temperature_preference)
 	var is_dehydrated = (current_time - last_hydration) / 3600 >= max_hours_without_hydration
 
-	return !is_malnourished && !is_dehydrated
+	return !is_malnourished && !is_thermal_stress && !is_dehydrated
