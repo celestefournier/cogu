@@ -3,8 +3,9 @@ extends TextureRect
 @onready var food_balloon = $'../FoodBalloon'
 @onready var temperature_balloon = $'../TemperatureBalloon'
 @onready var humidity_balloon = $'../HumidityBalloon'
-@onready var food_value = $'../Debbuger/Food Value'
-@onready var humidity_value = $'../Debbuger/Humidy Value'
+@onready var food_value_debug = $'../Debbuger/Food Value'
+@onready var humidity_value_debug = $'../Debbuger/Humidy Value'
+@onready var humidity_value = $'../HealthModal/HumidityValue'
 @onready var game_controller = $'../../Game'
 
 var fungus_texture = load(Global.player_fungus)
@@ -20,7 +21,6 @@ func _ready():
 	var temperature_preference_max = 30
 	var humidity_preference_min = 70
 	var humidity_preference_max = 80
-	var last_hydration = Time.get_unix_time_from_system()
 
 	fungus = Fungus.new(
 		nutrient_preference,
@@ -28,8 +28,9 @@ func _ready():
 		temperature_preference_max,
 		humidity_preference_min,
 		humidity_preference_max,
-		last_hydration,
-		intial_temperature
+		intial_temperature,
+		Time.get_unix_time_from_system(),
+		Time.get_unix_time_from_system()
 	)
 
 	_loop_action()
@@ -37,8 +38,9 @@ func _ready():
 
 func _loop_action():
 	while true:
-		food_value.text = str(fungus.nutrition_status)
-		humidity_value.text = str(fungus.humidity_status)
+		food_value_debug.text = str(fungus.nutrition_status)
+		humidity_value_debug.text = str(fungus.humidity_status)
+		humidity_value.text = str(fungus.humidity_status) + '%'
 
 		await get_tree().create_timer(1).timeout
 
@@ -57,14 +59,14 @@ func _loop_action():
 		if (fungus.humidity_status <= 50 && !balloon_visible):
 			humidity_balloon.visible = true
 			balloon_visible = true
-
+		
 		if (!fungus.is_alive()):
 			game_controller.game_over()
 
 
 func feed(nutrient):
 	fungus.feed(nutrient)
-	food_value.text = str(fungus.nutrition_status)
+	food_value_debug.text = str(fungus.nutrition_status)
 
 	if (fungus.nutrition_status >= 50):
 		food_balloon.visible = false
@@ -80,7 +82,7 @@ func change_temperature(temperature):
 
 func hydrate():
 	fungus.hydrate()
-	humidity_value.text = str(fungus.humidity_status)
+	humidity_value_debug.text = str(fungus.humidity_status)
 
 	if (fungus.humidity_status >= 50):
 		humidity_balloon.visible = false

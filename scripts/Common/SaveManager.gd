@@ -1,9 +1,16 @@
-func Save(player_data):
+class_name SaveManager
+
+static func save_game(player_data):
 	var file = FileAccess.open("user://player.sav", FileAccess.WRITE)
 	file.store_var(player_data)
 	file.close()
 
-func Load():
+static func load_game():
+	if !FileAccess.file_exists("user://player.sav"):
+		return null
+
 	var file = FileAccess.open("user://player.sav", FileAccess.READ)
-	var content = file.get_var()
-	return content
+	var playerData = file.get_var()
+	file.close()
+
+	return playerData

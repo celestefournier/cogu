@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bky5nae3pmoi3"]
 
-[ext_resource type="Script" path="res://scripts/SelectScreen.gd" id="1_g7ry2"]
+[ext_resource type="Script" path="res://scripts/SelectScreen/SelectScreen.gd" id="1_g7ry2"]
 [ext_resource type="Texture2D" uid="uid://cg78cghl1obap" path="res://sprites/UI/reshot-icon-chevron-arrow-left-circle-XY6MSRE5DN.svg" id="2_yyw78"]
 [ext_resource type="Texture2D" uid="uid://n80rcb7ha07f" path="res://sprites/Fungi/2.png" id="3_bhqb0"]
 [ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="5_en4y3"]
