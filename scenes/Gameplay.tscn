@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjt83tvonc67t"]
+[gd_scene load_steps=10 format=3 uid="uid://cjt83tvonc67t"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay/GameplayController.gd" id="1_pk7iq"]
 [ext_resource type="Script" path="res://scripts/Gameplay/FoodModal.gd" id="2_hb6d8"]
 [ext_resource type="Script" path="res://scripts/Gameplay/HealthModal.gd" id="3_360f8"]
-[ext_resource type="Texture2D" uid="uid://la218uulnxoy" path="res://sprites/1.png" id="3_k6ui7"]
+[ext_resource type="Texture2D" uid="uid://la218uulnxoy" path="res://sprites/Fungi/1.png" id="3_k6ui7"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="4_2h8wg"]
 [ext_resource type="Script" path="res://scripts/Gameplay/FungusController.gd" id="4_fvaol"]
-[ext_resource type="Texture2D" uid="uid://du5jca0xup8ty" path="res://sprites/food.png" id="5_fcqfa"]
-[ext_resource type="Texture2D" uid="uid://p5jih2wjb8l2" path="res://sprites/humidity_balloon.png" id="7_loalp"]
-[ext_resource type="Texture2D" uid="uid://bi1e3nsurixvn" path="res://sprites/temperature_balloon.png" id="8_w5pn6"]
+[ext_resource type="Texture2D" uid="uid://du5jca0xup8ty" path="res://sprites/UI/food.png" id="5_fcqfa"]
+[ext_resource type="Texture2D" uid="uid://p5jih2wjb8l2" path="res://sprites/UI/humidity_balloon.png" id="7_loalp"]
+[ext_resource type="Texture2D" uid="uid://bi1e3nsurixvn" path="res://sprites/UI/temperature_balloon.png" id="8_w5pn6"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -25,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.52549, 0.407843, 1)
+color = Color(0.8, 0.870588, 0.709804, 1)
 
 [node name="Debbuger" type="Control" parent="."]
 layout_mode = 1
@@ -41,7 +42,8 @@ offset_left = 84.0
 offset_top = 57.0
 offset_right = 273.0
 offset_bottom = 156.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.188235, 0.231373, 0.129412, 0.192157)
 theme_override_font_sizes/font_size = 70
 text = "nutri:"
 
@@ -51,7 +53,8 @@ offset_left = 273.0
 offset_top = 57.0
 offset_right = 402.0
 offset_bottom = 156.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.188235, 0.231373, 0.129412, 0.192157)
 theme_override_font_sizes/font_size = 70
 text = "100"
 
@@ -61,7 +64,8 @@ offset_left = 671.0
 offset_top = 57.0
 offset_right = 909.0
 offset_bottom = 156.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.188235, 0.231373, 0.129412, 0.192157)
 theme_override_font_sizes/font_size = 70
 text = "umid:"
 
@@ -71,12 +75,12 @@ offset_left = 879.0
 offset_top = 57.0
 offset_right = 1017.0
 offset_bottom = 156.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.266667)
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.188235, 0.231373, 0.129412, 0.192157)
 theme_override_font_sizes/font_size = 70
 text = "100"
 
 [node name="ActionButtons" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,6 +101,7 @@ offset_right = -23.0
 offset_bottom = -379.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Nutrição"
 
@@ -113,6 +118,7 @@ offset_right = 453.0
 offset_bottom = -379.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Saúde"
 
@@ -129,6 +135,7 @@ offset_right = 453.0
 offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 disabled = true
 text = "Registro"
@@ -158,6 +165,8 @@ offset_right = -307.0
 offset_bottom = -562.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.19, 0.23, 0.13, 1)
 theme_override_font_sizes/font_size = 70
 text = "<"
 flat = true
@@ -175,6 +184,7 @@ offset_right = 291.0
 offset_bottom = -557.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Proteína"
 horizontal_alignment = 1
@@ -193,6 +203,8 @@ offset_right = 440.0
 offset_bottom = -562.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
+theme_override_colors/font_color = Color(0.19, 0.23, 0.13, 1)
 theme_override_font_sizes/font_size = 70
 text = ">"
 flat = true
@@ -210,6 +222,7 @@ offset_right = -23.0
 offset_bottom = -294.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Vegetal"
 
@@ -226,6 +239,7 @@ offset_right = 453.0
 offset_bottom = -294.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Animal"
 
@@ -242,6 +256,7 @@ offset_right = 302.0
 offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 40
 text = "Saúde"
 
@@ -258,10 +273,12 @@ offset_right = -25.0
 offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 40
 text = "Voltar"
 
 [node name="HealthModal" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -278,8 +295,22 @@ offset_left = 84.0
 offset_top = 153.0
 offset_right = 213.0
 offset_bottom = 252.0
-theme_override_font_sizes/font_size = 70
+theme = ExtResource("4_2h8wg")
 text = "0°C"
+
+[node name="HumidityValue" type="Label" parent="HealthModal"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -219.0
+offset_top = 153.0
+offset_right = -90.0
+offset_bottom = 252.0
+grow_horizontal = 0
+theme = ExtResource("4_2h8wg")
+text = "0%"
+horizontal_alignment = 2
 
 [node name="TemperatureButton" type="Button" parent="HealthModal"]
 layout_mode = 1
@@ -294,6 +325,7 @@ offset_right = -23.0
 offset_bottom = -411.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Temperatura"
 
@@ -310,6 +342,7 @@ offset_right = 453.0
 offset_bottom = -411.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 55
 text = "Umidade"
 
@@ -326,6 +359,7 @@ offset_right = 302.0
 offset_bottom = -105.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 40
 text = "Alimentação"
 
@@ -342,6 +376,7 @@ offset_right = -25.0
 offset_bottom = -105.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 theme_override_font_sizes/font_size = 40
 text = "Voltar"
 
@@ -352,12 +387,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -439.5
+offset_left = -453.0
 offset_top = -382.0
-offset_right = 439.5
+offset_right = 453.0
 offset_bottom = -258.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("4_2h8wg")
 max_value = 40.0
 value = 20.0
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dilqxtmjnvlbj"]
 
 [ext_resource type="Script" path="res://scripts/GameOver/GameOverController.gd" id="1_v4uvm"]
-[ext_resource type="FontFile" uid="uid://doov86h8df6is" path="res://fonts/Mooli-Regular.ttf" id="2_34k0b"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="2_jnk1p"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.317647, 0.215686, 1)
+color = Color(0.8, 0.870588, 0.709804, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -28,12 +28,12 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -434.0
-offset_top = 454.0
+offset_top = 373.0
 offset_right = 434.0
-offset_bottom = 584.0
+offset_bottom = 520.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_34k0b")
-theme_override_font_sizes/font_size = 105
+theme = ExtResource("2_jnk1p")
+theme_override_font_sizes/font_size = 121
 text = "Fim de Jogo"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -51,8 +51,7 @@ offset_right = 291.0
 offset_bottom = -517.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_34k0b")
-theme_override_font_sizes/font_size = 80
+theme = ExtResource("2_jnk1p")
 text = "Recomeçar"
 
 [connection signal="button_up" from="Retry" to="." method="_on_retry_button_up"]

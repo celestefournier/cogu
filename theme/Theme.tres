@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cx63u7p8ge6u8"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cx63u7p8ge6u8"]
 
+[ext_resource type="Texture2D" uid="uid://ba2u55aecqbuu" path="res://sprites/UI/grabber.png" id="1_i3ho8"]
 [ext_resource type="FontFile" uid="uid://dytahftn1arer" path="res://fonts/FredokaOne-Regular.ttf" id="1_lafjm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iakqk"]
@@ -23,6 +24,15 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n76k2"]
+bg_color = Color(0.19, 0.23, 0.13, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
 [resource]
 default_font = ExtResource("1_lafjm")
 default_font_size = 66
@@ -33,4 +43,7 @@ Button/styles/disabled = SubResource("StyleBoxFlat_iakqk")
 Button/styles/hover = SubResource("StyleBoxFlat_p3by6")
 Button/styles/normal = SubResource("StyleBoxFlat_p3by6")
 Button/styles/pressed = SubResource("StyleBoxFlat_pb15q")
+HSlider/icons/grabber = ExtResource("1_i3ho8")
+HSlider/icons/grabber_highlight = ExtResource("1_i3ho8")
+HSlider/styles/slider = SubResource("StyleBoxFlat_n76k2")
 Label/colors/font_color = Color(0.188235, 0.231373, 0.129412, 1)
