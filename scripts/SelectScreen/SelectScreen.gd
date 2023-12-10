@@ -3,6 +3,11 @@ extends Control
 var selected_fungus = 0
 var fungus_list
 
+func _ready():
+	var node = get_tree().root.get_node("MeuSingleton")
+	print(node.variavel)
+	node.queue_free()
+
 func _on_indoor_button_up():
 	fungus_list = Global.INDOOR_FUNGUS
 	open_fungus_selection_screen()
