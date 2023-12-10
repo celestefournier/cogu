@@ -1,15 +1,19 @@
-extends Node
-
+extends Resource
 class_name Fungus
 
 const NUTRIENT_PREFERENCE_BONUS = 30
 const NUTRIENT_NOT_PREFERENCE_BONUS = 10
 
-var nutrient_preference: Nutrient
-var temperature_preference_min: int
-var temperature_preference_max: int
-var humidity_preference_min: int
-var humidity_preference_max: int
+enum Habitat { INTERNAL, EXTERNAL }
+
+@export var id: int
+@export var image: CompressedTexture2D
+@export var habitat: Habitat
+@export var nutrient_preference: Nutrient
+@export var temperature_preference_min: int
+@export var temperature_preference_max: int
+@export var humidity_preference_min: int
+@export var humidity_preference_max: int
 
 var nutrition_status: int = 100
 var humidity_status: int = 100

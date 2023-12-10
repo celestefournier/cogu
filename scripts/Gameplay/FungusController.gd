@@ -1,4 +1,4 @@
-extends TextureRect
+extends Node
 
 @onready var food_balloon = $'../FoodBalloon'
 @onready var temperature_balloon = $'../TemperatureBalloon'
