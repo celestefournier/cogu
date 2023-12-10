@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x75t4hkaytyl"
-path="res://.godot/imported/3.png-08d67c067f5a3f172754c3bbca4b6a4e.ctex"
+uid="uid://bsg3toy6ylimb"
+path="res://.godot/imported/champignon.png-5f45583994eadafd7a03481a1414dc38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Fungi/3.png"
-dest_files=["res://.godot/imported/3.png-08d67c067f5a3f172754c3bbca4b6a4e.ctex"]
+source_file="res://sprites/Fungi/champignon.png"
+dest_files=["res://.godot/imported/champignon.png-5f45583994eadafd7a03481a1414dc38.ctex"]
 
 [params]
 

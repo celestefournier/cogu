@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Menu/MenuController.gd" id="1_dnnsu"]
 [ext_resource type="FontFile" uid="uid://dytahftn1arer" path="res://fonts/FredokaOne-Regular.ttf" id="2_qngdu"]
-[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="3_evk30"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://resources/theme/Theme.tres" id="3_evk30"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

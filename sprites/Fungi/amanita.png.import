@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2d7evmhpc1jl"
-path="res://.godot/imported/4.png-10b1a774bc71895662b1e0feebb277df.ctex"
+uid="uid://df1nj40emp4d4"
+path="res://.godot/imported/amanita.png-b0e4d639ea148a87aee90e94ae0fd181.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Fungi/4.png"
-dest_files=["res://.godot/imported/4.png-10b1a774bc71895662b1e0feebb277df.ctex"]
+source_file="res://sprites/Fungi/amanita.png"
+dest_files=["res://.godot/imported/amanita.png-b0e4d639ea148a87aee90e94ae0fd181.ctex"]
 
 [params]
 

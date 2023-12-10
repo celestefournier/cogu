@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://la218uulnxoy"
-path="res://.godot/imported/1.png-52a21d7942aee88a3b36aa2a5838de59.ctex"
+uid="uid://ogsuc7pxxmdy"
+path="res://.godot/imported/shimeji.png-fbc1bbc8c4201c1a21cfa799d1af4aa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Fungi/1.png"
-dest_files=["res://.godot/imported/1.png-52a21d7942aee88a3b36aa2a5838de59.ctex"]
+source_file="res://sprites/Fungi/shimeji.png"
+dest_files=["res://.godot/imported/shimeji.png-fbc1bbc8c4201c1a21cfa799d1af4aa4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqyvcqqa3autf"
-path="res://.godot/imported/5.png-822237f2edf76d452274fc67dcd066d1.ctex"
+uid="uid://djkftktxbi5j0"
+path="res://.godot/imported/botrytis-cinerea.png-1ecb756bddc65f059d674ec024ae2e04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Fungi/5.png"
-dest_files=["res://.godot/imported/5.png-822237f2edf76d452274fc67dcd066d1.ctex"]
+source_file="res://sprites/Fungi/botrytis-cinerea.png"
+dest_files=["res://.godot/imported/botrytis-cinerea.png-1ecb756bddc65f059d674ec024ae2e04.ctex"]
 
 [params]
 

@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/Gameplay/GameplayController.gd" id="1_pk7iq"]
 [ext_resource type="Script" path="res://scripts/Gameplay/FoodModal.gd" id="2_hb6d8"]
 [ext_resource type="Script" path="res://scripts/Gameplay/HealthModal.gd" id="3_360f8"]
-[ext_resource type="Texture2D" uid="uid://la218uulnxoy" path="res://sprites/Fungi/1.png" id="3_k6ui7"]
-[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://theme/Theme.tres" id="4_2h8wg"]
+[ext_resource type="Theme" uid="uid://cx63u7p8ge6u8" path="res://resources/theme/Theme.tres" id="4_2h8wg"]
 [ext_resource type="Script" path="res://scripts/Gameplay/FungusController.gd" id="4_fvaol"]
 [ext_resource type="Texture2D" uid="uid://du5jca0xup8ty" path="res://sprites/UI/food.png" id="5_fcqfa"]
+[ext_resource type="Texture2D" uid="uid://df1nj40emp4d4" path="res://sprites/Fungi/amanita.png" id="5_ld58b"]
 [ext_resource type="Texture2D" uid="uid://p5jih2wjb8l2" path="res://sprites/UI/humidity_balloon.png" id="7_loalp"]
 [ext_resource type="Texture2D" uid="uid://bi1e3nsurixvn" path="res://sprites/UI/temperature_balloon.png" id="8_w5pn6"]
 
@@ -410,7 +410,7 @@ offset_right = 176.0
 offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_k6ui7")
+texture = ExtResource("5_ld58b")
 script = ExtResource("4_fvaol")
 
 [node name="FoodBalloon" type="TextureRect" parent="."]

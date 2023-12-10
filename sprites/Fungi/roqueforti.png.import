@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk1f48dhkvei0"
-path="res://.godot/imported/6.png-0a3af1409bf3980564156e4e60a55d27.ctex"
+uid="uid://bal0u5gwniy1k"
+path="res://.godot/imported/roqueforti.png-52dc25de0a174614fabd8ca4fe49b243.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Fungi/6.png"
-dest_files=["res://.godot/imported/6.png-0a3af1409bf3980564156e4e60a55d27.ctex"]
+source_file="res://sprites/Fungi/roqueforti.png"
+dest_files=["res://.godot/imported/roqueforti.png-52dc25de0a174614fabd8ca4fe49b243.ctex"]
 
 [params]
 
