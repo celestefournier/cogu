@@ -115,3 +115,4 @@ text = "Créditos"
 icon_alignment = 1
 
 [connection signal="button_down" from="NewGame" to="." method="new_game"]
+[connection signal="button_up" from="Continue" to="." method="continue_game"]

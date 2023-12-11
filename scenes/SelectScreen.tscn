@@ -139,7 +139,7 @@ text = "Onde você quer colher seu fungo?"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="IndoorButton" type="Button" parent="AreaSelection"]
+[node name="OutdoorButton" type="Button" parent="AreaSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -155,7 +155,7 @@ grow_vertical = 2
 theme = ExtResource("5_en4y3")
 text = "Ar Livre"
 
-[node name="OutdoorButton" type="Button" parent="AreaSelection"]
+[node name="IndoorButton" type="Button" parent="AreaSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -175,5 +175,5 @@ text = "Em Casa"
 [connection signal="pressed" from="FungosSelecion/Left Button" to="." method="_on_ui_le_pressed"]
 [connection signal="pressed" from="FungosSelecion/Right Button" to="." method="_on_ui_ld_pressed"]
 [connection signal="pressed" from="FungosSelecion/Confirm" to="." method="_on_confirme_pressed"]
-[connection signal="button_up" from="AreaSelection/IndoorButton" to="." method="_on_indoor_button_up"]
 [connection signal="button_up" from="AreaSelection/OutdoorButton" to="." method="_on_outdoor_button_up"]
+[connection signal="button_up" from="AreaSelection/IndoorButton" to="." method="_on_indoor_button_up"]

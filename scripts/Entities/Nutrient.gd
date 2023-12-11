@@ -7,7 +7,7 @@ enum Origin { ANIMAL, VEGETAL }
 @export var type: Type
 @export var origin: Origin
 
-func _init(_type, _origin):
+func _init(_type = Type.PROTEIN, _origin = Origin.ANIMAL):
 	type = _type
 	origin = _origin
 

@@ -8,30 +8,17 @@ extends Node
 @onready var humidity_value = $'../HealthModal/HumidityValue'
 @onready var game_controller = $'../../Game'
 
-var fungus_texture = load(Global.player_fungus)
 var fungus
 var balloon_visible = false
 var intial_temperature = 20
 
 func _ready():
-	self.texture = fungus_texture
+	var gameplay_scene_data = get_tree().root.get_node("GameplaySceneData")
+	gameplay_scene_data.queue_free()
+	fungus = gameplay_scene_data.fungus
+	fungus.setup(100, 100, intial_temperature, Time.get_unix_time_from_system(), Time.get_unix_time_from_system())
 
-	var nutrient_preference = Nutrient.new(Nutrient.Type.PROTEIN, Nutrient.Origin.ANIMAL)
-	var temperature_preference_min = 20
-	var temperature_preference_max = 30
-	var humidity_preference_min = 70
-	var humidity_preference_max = 80
-
-	fungus = Fungus.new(
-		nutrient_preference,
-		temperature_preference_min,
-		temperature_preference_max,
-		humidity_preference_min,
-		humidity_preference_max,
-		intial_temperature,
-		Time.get_unix_time_from_system(),
-		Time.get_unix_time_from_system()
-	)
+	self.texture = fungus.image
 
 	_loop_action()
 

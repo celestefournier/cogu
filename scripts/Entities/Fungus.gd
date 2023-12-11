@@ -15,28 +15,15 @@ enum Habitat { INTERNAL, EXTERNAL }
 @export var humidity_preference_min: int
 @export var humidity_preference_max: int
 
-var nutrition_status: int = 100
-var humidity_status: int = 100
-
+var nutrition_status: int
+var humidity_status: int
 var temperature: int
 var last_hydration: float
 var last_temperature_change: float
 
-func _init(
-	_nutrient_preference,
-	_temperature_preference_min,
-	_temperature_preference_max,
-	_humidity_preference_min,
-	_humidity_preference_max,
-	_temperature,
-	_last_hydration,
-	_last_temperature_change
-):
-	nutrient_preference = _nutrient_preference
-	temperature_preference_min = _temperature_preference_min
-	temperature_preference_max = _temperature_preference_max
-	humidity_preference_min = _humidity_preference_min
-	humidity_preference_max = _humidity_preference_max
+func setup(_nutrition_status, _humidity_status, _temperature, _last_hydration, _last_temperature_change):
+	nutrition_status = _nutrition_status
+	humidity_status = _humidity_status
 	temperature = _temperature
 	last_hydration = _last_hydration
 	last_temperature_change = _last_temperature_change
@@ -64,6 +51,7 @@ func hydrate():
 func change_temperature(value):
 	temperature = value
 	last_temperature_change = Time.get_unix_time_from_system()
+
 
 func update_status():
 	nutrition_status -= 2
